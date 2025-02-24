@@ -4,6 +4,7 @@ terraform {
     linode = {
       source = "linode/linode"
       required_version = "2.34.1"
+      version = "2.34.1"
     }
   }
 }
