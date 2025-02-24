@@ -4,10 +4,12 @@ The infrastructure is managed using Hashicorp Terraform Cloud.
 Deployments are triggered from GitHub Actions workflows.
 
 ## Setting up your own project
+
+### Linode
 * Login to Linode account. 
 * Create a personal access token. This secret is the value of "token" input variable of the Terraform module.
 
-
+### Terraform Cloud
 * Login to Terraform Cloud.
 * Create an organization like "mysite-org".
 * Create a Team Token scoped to owners. This secret is the value of TF_API_TOKEN used by GitHub Actions to authenticate to Hashicorp Terraform Cloud.
@@ -19,7 +21,7 @@ Deployments are triggered from GitHub Actions workflows.
 * In the workspace, create a workspace variable called "token" with the value of the Linode Personal Access Token.
 * Go back to the organization-level variable set you created previously and apply to the workspace specifically.
 
-
+### GitHub
 * Clone this repository. Name it like "mysite-site-terraform".
 * Create a TF_API_TOKEN repository secret by going to Settings > Secrets and variables > Actions. This secret is used by GitHub Actions to authenticate to Hashicorp Terraform Cloud during runs.
 * Change the values of TF_CLOUD_ORGANIZATION and TF_WORKSPACE in .github/workflows/terraform-apply.yml and .github/workflows/terraform-plan.yml.
