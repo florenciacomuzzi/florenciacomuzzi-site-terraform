@@ -5,9 +5,9 @@ on:
       - main
 
 env:
-  TF_CLOUD_ORGANIZATION: "florenciacomuzzi-org"
+  TF_CLOUD_ORGANIZATION: "florenciacomuzzi-org" # template field
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "production"
+  TF_WORKSPACE: "production" # template field
   CONFIG_DIRECTORY: "./"
 jobs:
   terraform:
