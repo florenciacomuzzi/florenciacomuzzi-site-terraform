@@ -1,5 +1,5 @@
 variable "token" {
-  sensitive = true
-  type = string
+  sensitive   = true
+  type        = string
   description = "Linode API Token"
 }
