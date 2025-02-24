@@ -8,6 +8,7 @@ env:
   CONFIG_DIRECTORY: "./"
 jobs:
   tflint:
+    name: "TFLint"
     runs-on: ${{ matrix.os }}
 
     strategy:
